@@ -23,6 +23,12 @@ WriteMakefile(
                 web => 'https://github.com/cnighswonger/Business-US-USPS-IMB/issues',
             },
         },
+        provides => {
+            'Business::US::USPS::IMB' => {
+                file    => 'IMB.pm',
+                version => '0.04',
+            },
+        },
     },
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'IMB.pm', # retrieve abstract from module
