@@ -10,6 +10,20 @@ WriteMakefile(
     PREREQ_PM         => {
 	    'Test::More'	=> 0,
 	    }, # e.g., Module::Name => 1.1
+    LICENSE => 'perl',
+    META_MERGE => {
+        'meta-spec' => { version => 2 },
+        resources => {
+            repository => {
+                type => 'git',
+                url  => 'https://github.com/cnighswonger/Business-US-USPS-IMB.git',
+                web  => 'https://github.com/cnighswonger/Business-US-USPS-IMB',
+            },
+            bugtracker => {
+                web => 'https://github.com/cnighswonger/Business-US-USPS-IMB/issues',
+            },
+        },
+    },
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'IMB.pm', # retrieve abstract from module
        AUTHOR         => 'Chris Nighswonger') : ()),
