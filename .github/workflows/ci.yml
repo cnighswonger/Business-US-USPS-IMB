@@ -9,7 +9,7 @@ on:
 
 jobs:
   test:
-    uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-test.yml@main
+    uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-test.yml@b4ba4e5553820e802da91d58eba295575945ad95 # main @ 2026-06-23
     with:
       # Start conservative - Linux only since this is an XS module with C code
       # Can expand to macOS/Windows after confirming builds work
@@ -18,9 +18,9 @@ jobs:
       perl_version: '["5.24", "5.30", "5.36", "5.40"]'
 
   coverage:
-    uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-coverage.yml@main
+    uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-coverage.yml@b4ba4e5553820e802da91d58eba295575945ad95 # main @ 2026-06-23
 
   perlcritic:
-    uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-perlcritic.yml@main
+    uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-perlcritic.yml@b4ba4e5553820e802da91d58eba295575945ad95 # main @ 2026-06-23
     with:
       level: 5
